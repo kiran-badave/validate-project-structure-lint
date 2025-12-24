@@ -1,0 +1,48 @@
+{
+  "name": "project-structure-lint",
+  "version": "1.0.0",
+  "description": "A CLI tool to validate project folder structure and file naming conventions with configurable presets",
+  "main": "dist/index.js",
+  "bin": {
+    "validate-structure": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "validation",
+    "folder-structure",
+    "naming-convention",
+    "linter",
+    "project-structure",
+    "react",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/micromatch": "^4.0.10",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "cosmiconfig": "^9.0.0",
+    "glob": "^10.3.10",
+    "micromatch": "^4.0.5"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

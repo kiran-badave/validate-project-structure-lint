@@ -1,0 +1,45 @@
+{
+  "preset": "react",
+  "rootDir": "src",
+  "rules": {
+    "componentColocation": {
+      "enabled": true,
+      "componentDirs": ["components", "pages", "features"],
+      "requiredFiles": [
+        {
+          "pattern": "*.test.{ts,tsx,js,jsx}",
+          "required": true,
+          "description": "Test file for component"
+        },
+        {
+          "pattern": "*.stories.{ts,tsx,js,jsx}",
+          "required": true,
+          "description": "Storybook story file"
+        }
+      ],
+      "namingConvention": "PascalCase"
+    },
+    "fileNaming": {
+      "components/**/*.{tsx,jsx}": {
+        "convention": "PascalCase",
+        "severity": "error"
+      },
+      "hooks/**/*.{ts,tsx,js,jsx}": {
+        "convention": "camelCase",
+        "severity": "error"
+      },
+      "utils/**/*.{ts,js}": {
+        "convention": "camelCase",
+        "severity": "error"
+      }
+    }
+  },
+  "ignore": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.next/**",
+    "**/coverage/**"
+  ],
+  "severity": "error"
+}
